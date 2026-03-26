@@ -1,0 +1,8 @@
+body { margin: 0; overflow: hidden; font-family: sans-serif; background: #f8f9fa; }
+canvas { display: block; cursor: crosshair; }
+.toolbar {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background: white; padding: 10px 20px; border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; gap: 15px; align-items: center;
+}
+button { border: none; background: #e74c3c; color: white; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
