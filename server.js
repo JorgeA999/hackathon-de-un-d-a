@@ -15,6 +15,7 @@ io.on('connection', (socket) => {
 
     // Escuchar cuando alguien dibuja y reenviar a los demás
     socket.on('draw', (data) => {
+        console.log("Dibujo recibido:", data);
         socket.broadcast.emit('draw', data);
     });
 

@@ -6,3 +6,7 @@ canvas { display: block; cursor: crosshair; }
     box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; gap: 15px; align-items: center;
 }
 button { border: none; background: #e74c3c; color: white; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+
+canvas {
+  display: block;
+}
