@@ -1,6 +1,7 @@
 import { initTools, getState } from "./tools.js";
 import { drawAll } from "./draw.js";
 import { handleLine } from "./geometry.js";
+import { enviarTrazo, escucharTrazos } from "./realtime.js";
 
 const canvas = document.getElementById("whiteboard");
 const ctx = canvas.getContext("2d");
@@ -71,3 +72,11 @@ document.getElementById("clearBtn").onclick = ()=>{
     state.trazos = [];
     drawAll(ctx,state);
 };
+
+state.trazos.push(trazo);
+enviarTrazo(trazo);
+
+escucharTrazos(trazo=>{
+    state.trazos.push(trazo);
+    drawAll(ctx,state);
+});
